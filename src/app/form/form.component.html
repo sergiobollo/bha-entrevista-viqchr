@@ -1,0 +1,30 @@
+<div class="container">
+  <form [formGroup]="fg" (ngSubmit)="guardar(fg.controls['nombre'].value)">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingresar nombre..."
+        formControlName="nombre"
+      />
+    </div>
+    <div
+      *ngIf="fg.controls['nombre'].hasError('required')"
+      class="alert alert-danger"
+      role="alert"
+    >
+      nombre es obligatorio!
+    </div>
+    <div
+      *ngIf="fg.controls['nombre'].hasError('minLongNombre')"
+      class="alert alert-danger"
+      role="alert"
+    >
+      el nombre debe tener al menos {{ minLongitud }} caracteres!
+    </div>
+    <button type="submit" class="btn btn-primary" *ngIf="fg.valid">Guardar!</button>
+  </form>
+</div>

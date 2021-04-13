@@ -1,0 +1,58 @@
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4 text-center text-dark">Artículos</h1>
+</div>
+
+<div class="container" id="landscape">
+  <div class="table-responsive-md">
+    <table class="table mb-5 table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="text-center">ID</th>
+          <th scope="col" class="text-center">Creación</th>
+          <th scope="col" class="text-center">Modificado</th>
+          <th scope="col" class="text-center">Nombre</th>
+          <th scope="col" class="text-center">Descripción</th>
+          <th scope="col" class="text-center">Editar datos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of articulos">
+          <td class="text-center">{{ i.id }}</td>
+          <td class="text-center">{{ i.creacion }}</td>
+          <td class="text-center">{{ i.modificado }}</td>
+          <td class="text-center">{{ i.nombre }}</td>
+          <td class="text-center">{{ i.descripcion }}</td>
+          <td class="text-center">
+            <a class="link-secondary" [routerLink]="['/editarNombre', i.id]">Modificar nombre</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container" id="portrait">
+  <div class="table-responsive-md">
+    <table class="table mb-5 table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="text-center">ID</th>
+          <th scope="col" class="text-center">Modificado</th>
+          <th scope="col" class="text-center">Nombre</th>
+          <th scope="col" class="text-center">Editar datos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of articulos">
+          <td class="text-center">{{ i.id }}</td>
+          <td class="text-center">{{ i.modificado }}</td>
+          <td class="text-center">{{ i.nombre }}</td>
+
+          <td class="text-center">
+            <a class="link-secondary" [routerLink]="['/editarNombre', i.id]">Modificar nombre</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+/* Add application styles & imports to this file! */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+  font-family: "Muli";
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 770px) {
+  a,
+  p,
+  td,
+  th,
+  label,
+  input,
+  li,
+  .alert,
+  button {
+    font-size: 15px !important;
+  }
+  h1 {
+    font-size: 45px !important;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  a,
+  p,
+  td,
+  th,
+  label,
+  input,
+  li,
+  .alert,
+  button {
+    font-size: 10px !important;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+}
+
+@media (orientation: landscape) {
+  #landscape {
+    display: block;
+  }
+  #portrait {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  #landscape {
+    display: none;
+  }
+  #portrait {
+    display: block;
+  }
+}

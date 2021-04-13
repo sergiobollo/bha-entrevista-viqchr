@@ -1,0 +1,7 @@
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4 text-center text-dark">Editar artículo {{id}}</h1>
+</div>
+
+<app-form (enviarDatos)="actualizar($event)" [articulo]="articulo"></app-form>
+
+<app-articulos class="d-none" [articulosActualizados]="articulos"></app-articulos>
